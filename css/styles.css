@@ -1,0 +1,107 @@
+/* css/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  body > .container {
+    max-width: 1570px;
+  } 
+  
+  .form-container {
+    border: thin;
+    border-style: solid;
+    border-color: #8080805e;
+    padding: 15px 15px;
+  }
+  
+  #addRuleBtn {
+    color: #4f81fe!important;
+    padding: 4px 10px;
+    font-weight: 500;
+  }
+  
+  .rules-container {
+    border-color: lightgrey;
+    border-style: dashed;
+    padding: 10px;
+    border-radius: 5px;
+    border-width: thin;
+    margin-bottom: 10px
+  }
+  
+  .rules-condition-container {
+    border-radius: 5px;
+    background-color: #cccccc57;
+    padding: 10px;
+  }
+  
+  .revenue-group-table {
+    overflow: auto;
+    margin: 0px -15px;
+    border-top: 1px solid lightgray;
+  }
+  
+  .revenue-group-table > table > thead > tr > th {
+    min-width: 100px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #6c757d;
+  }
+  
+  .revenue-group-table > table > thead > tr > th:nth-child(1),
+  .revenue-group-table > table > tbody > tr > td:nth-child(1) {
+    padding-left: 15px;
+  } 
+  
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+  
+  /* Set the width of the scrollbar track */
+  ::-webkit-scrollbar-track {
+    width: 5px;
+  }
+  
+  /* Style the scrollbar thumb (the draggable part) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; /* Change this to your desired color */
+    border-radius: 5px;
+  }
+  
+  /* Set the size of the scrollbar thumb */
+  ::-webkit-scrollbar-thumb:vertical {
+    min-height: 20px; /* Change this to your desired height */
+  }
+  
+  /* Hide the scrollbar on the x-axis (horizontal) */
+  ::-webkit-scrollbar:horizontal {
+    display: none;
+  }
+  
+  .parameter {
+    margin-bottom: 4px;
+  }
+  
+  #deleteRevenueGroup img.delete-revenue-group {
+    background-color: #d3d3d382;
+    padding: 4px;
+    border-radius: 15px;
+  }
+
+  #deleteRowIcon {
+    opacity: 60%;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  #description-count {
+    background-color: lightgray;
+    margin-top: -20px;
+    margin-right: 5px;
+  }
+    
