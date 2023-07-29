@@ -1,0 +1,25 @@
+{
+  "name": "ng-revenue-group-app",
+  "version": "1.0.0",
+  "description": "Revenue Group form for assessment\r Task: \r Replicate the UI design with its basic functionality that submits data to display its results. \r You are allowed to use any frontend programming language or framework (e.g. VueJS or React) of your choice. \r You are not required to build the backend for this test.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx http-server -c-1 -o --cors",
+    "build": "babel src -d dist"
+  },
+  "keywords": [],
+  "author": "Fathurrahman Zaini",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "angular": "^1.8.2",
+    "bootstrap": "^5.3.0",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6"
+  }
+}
