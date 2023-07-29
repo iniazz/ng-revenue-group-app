@@ -21,14 +21,15 @@
                                     <input class="form-control form-control-sm" type="text" id="groupName" ng-model="group.name" placeholder="Name" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="groupName" class="form-label">Group Description</label>
-                                    <textarea class="form-control form-control-sm" type="text" id="groupDescription" ng-change="updateWordCount()" ng-model="group.description" rows="4" maxlength="200" placeholder="Add description" required>
-                                        <span class="pull-right label label-default" id="description-count">{{ wordCount }} / {{ maxWordCount }}</span>
-                                    </textarea>
+                                    <label for="groupDescription" class="form-label">Group Description</label>
+                                    <div class="textarea-container">
+                                        <textarea class="form-control form-control-sm" id="groupDescription" ng-change="updateLetterCount()" ng-model="group.description" rows="4" maxlength="200" placeholder="Add description" required></textarea>
+                                        <span class="letter-count" id="description-count">{{ letterCount }} / {{ maxLetterCount }}</span>
+                                    </div>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="specialGroup" ng-model="group.special" checked>
-                                    <label class="form-check-label" for="specialGroup">
+                                    <input class="form-check-input" type="checkbox" value="" ng-model="group.special" checked>
+                                    <label class="form-check-label" for="specialGroup" id="specialGroup">
                                         Special Group
                                     </label>
                                 </div>
@@ -51,7 +52,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <a class="float-md-end" ng-click="deleteRules($index)">
-                                                    <i class="fa-solid fa-xmark"></i>
+                                                    <i class="fa-solid fa-xmark" id="deleteRuleSymbol"></i>
                                                 </a>
                                             </div>
                                         </div>
@@ -107,11 +108,11 @@
                     <h5>Browse Revenue Groups</h5>
                     <br>
                     <div class="card" ng-repeat="group in revenueGroups">
-                        <div class="card-body">
+                        <div class="card-body" id="revenueGroupTable">
                             <div class="card-title-name">
                                 <div class="row d-flex">
                                     <div class="col-md-6">
-                                        <h6 class="card-title">{{ group.name }} <span class="badge rounded-pill text-bg-primary" ng-if="group.special">Special Group</span></h6>
+                                        <h6 class="card-title">{{ group.name }} <span class="badge rounded-pill text-bg-primary" id="specialGroupTag" ng-if="group.special">Special Group</span></h6>
                                     </div>
                                     <div class="col-md-6">
                                         <a class="float-md-end" id="deleteRevenueGroup" ng-click="deleteRevenueGroup($index)">
@@ -122,7 +123,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-8">
-                                    <p class="card-text">{{ group.description }}.</p>
+                                    <p class="card-text" id="groupDescription">{{ group.description }}.</p>
                                 </div>  
                             </div>
                             <br>

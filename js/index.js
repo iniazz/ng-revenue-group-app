@@ -92,6 +92,17 @@ app.controller('revenueGroupCtrl', function($scope) {
         return range(rule.parameters.length);
     };
 
+    $scope.updateLetterCount = function() {
+        if ($scope.group && $scope.group.description) {
+            $scope.letterCount = $scope.group.description.length;
+        } else {
+            $scope.letterCount = 0;
+        }
+
+        $scope.maxLetterCount = 200;
+    };
+    $scope.updateLetterCount();
+
     //Add & delete functions
     $scope.addParameter = function (rule) {
         rule.parameters = concat(rule.parameters, '')
