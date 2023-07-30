@@ -36,7 +36,6 @@ app.controller('revenueGroupCtrl', function($scope) {
               revenue: rule.revenue,
               ruleIndex: index + 1,
               parameters: cloneDeep(rule.parameters), // Copy the array to avoid reference issues
-              allParameters: calculateAllParameters(rule.parameters)
             };
         
             group.rules = concat(group.rules, formattedRule)
@@ -84,10 +83,6 @@ app.controller('revenueGroupCtrl', function($scope) {
         return range(maxParameters);
     };
 
-    function calculateAllParameters(parameters) {
-        return uniq(parameters);
-    }
-
     $scope.getParameterIndices = function (rule) {
         return range(rule.parameters.length);
     };
@@ -119,7 +114,6 @@ app.controller('revenueGroupCtrl', function($scope) {
             operator: '',
             parameters: [''],
             revenue: '',
-            allParameters: []
         });
     }
 

@@ -68,11 +68,29 @@ body > .container {
   max-height: 247px;
 }
 
-.revenue-group-table > table > thead > tr > th {
-  min-width: 100px;
+.revenue-group-table > table > thead > tr > th:first-child {
+  min-width: 65px;
   font-size: 15px;
   font-weight: 400;
   color: #6c757d;
+}
+
+.revenue-group-table > table > thead > tr > th:nth-child(n+2) {
+  min-width: 125px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #6c757d;
+}
+
+.revenue-group-table > table > thead > tr > th:last-child { 
+  min-width: 60px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #6c757d;
+}
+
+.revenue-group-table > table > tbody > tr > td { 
+  font-size: 15px;
 }
 
 .revenue-group-table > table > thead > tr > th:nth-child(1),
@@ -85,7 +103,7 @@ body > .container {
   background-color: #e0f8ff7d
 }
 
-.revenue-group-table::-webkit-scrollbar {
+.revenue-group-table::-webkit-scrollbar { 
   /* width: 5px; */
   background-color: rgb(240, 236, 230);
 }
@@ -94,16 +112,6 @@ body > .container {
   background-color: #ccc;
   border-radius: 4px; 
 }
-
-/* .revenue-group-table::-webkit-scrollbar-horizontal {
-  height: 5px;
-  background-color: rgb(240, 236, 230);
-}
-
-.revenue-group-table::-webkit-scrollbar-thumb-horizontal {
-  background-color: #ccc;
-  border-radius: 4px;
-} */
 
 .parameter {
   margin-bottom: 4px;
